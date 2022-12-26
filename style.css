@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Oxygen', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    font-size: 100%;
+}
+
+.logo {
+    min-height: 200px;
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+
+.logo img {
+    width: 200px;
+    height: 200px;
+}
+
+.logo h1 {
+    font-size: 100px;
+    width: 100%;
+}
+
+.logo input {
+    width: 50%;
+    height: 100px;
+    border: 2px solid black;
+    border-radius: 50px;
+    font-size: 50px;
+}
+
+.logo button {
+    width: 300px;
+    height: 100px;
+    font-size: 50px;
+    border-radius: 70px;
+    cursor: pointer;
+}
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+    background-color: yellow;
+    height: 100vh;
+    padding-top: 300px;
+}
+
+.panel {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color: white;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+    box-shadow: 2px 2px 4px black;
+}
+
+.panel h3 {
+    font-size: 100px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+    text-shadow: 2px 2px 4px black;
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width:480px) {
+    .container {
+        width: 100vw;
+    }
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5) {
+        display: none;
+    }
+}
